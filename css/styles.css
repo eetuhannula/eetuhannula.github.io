@@ -1,0 +1,30 @@
+body {
+background-color: black;
+margin: 0;
+padding: 0;
+}
+
+.header {
+    background-color: #DF7861;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.navbar {
+    background-color: #ECB390;
+    height: 50px;
+}
+
+.container {
+    background-color: #D4E2D4;
+    height: 100vh;
+}
+
+h1 {
+    color: #FCF8E8;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}

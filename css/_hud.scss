@@ -1,0 +1,92 @@
+@import './variables';
+
+// BUTTON THAT OPENS OVERLAY
+#overlay-system{
+    --position-top: 0rem;
+    --position-bottom: 0rem;
+    --position-left: 0rem;
+    --position-right: 0rem;
+    position: absolute;
+    top: var(--position-top);
+    left: var(--position-left);
+    width: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+    display: flex;
+    background-color: white; //testing
+}
+
+.overlay-switch-visual {
+    position: fixed;
+    bottom: calc(var(--position-bottom) + 1rem);
+    right: calc(var(--position-right) + 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 20px;
+    background-color: #d7ba7d;
+
+    transform: rotate(0deg);
+    transition: 1s;
+
+    z-index: 1;
+    
+    .menu-icon {
+        height: 4rem;
+        // SVG Icon color with filter:
+        //filter: invert(100%) sepia(3%) saturate(10%) hue-rotate(313deg) brightness(103%) contrast(103%);
+    }
+
+}
+
+.overlay-switch-checkbox {
+    position:fixed;
+    bottom: calc(var(--position-bottom) + 1rem);
+    right: calc(var(--position-right) + 1rem);
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    z-index: 2;
+    opacity: 0 ;
+    cursor: pointer;
+
+    // overlay appear on click
+    &:checked ~ .overlay-screen{
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    // overlay button animation
+    &:hover ~ .overlay-switch-visual {
+        transform: rotate(360deg) scale(1.1);
+        transition: 0.5s;
+    }
+    &:active ~ .overlay-switch-visual {
+        transform: rotate(360deg) scale(0.9);
+        transition: 0.3s;
+    }
+}
+
+.overlay-screen {
+    position: fixed;
+    backdrop-filter: blur(10px);
+    background-color: rgba(59, 59, 59, 0.434);
+    //position before click
+    transform: translateX(50%) translateY(50%) scale(0);
+    transform-origin: center;
+    transition: 0.5s;
+    
+    .screen-content {
+        width: 100svw;
+        height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -1,0 +1,85 @@
+@import './variables';
+@import './hud';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $fontMain;
+}
+
+:root {
+    color-scheme: dark;   
+}
+
+body {
+    background-color: $bgColor1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    height: 100svh;
+    width: 100svw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.infobar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    
+    h1 {
+        padding: 1rem 0 1rem 1rem;
+        font-size: 1.5rem;
+        font-weight: 200;
+        color: $text2;
+        font-family: monospace;
+    }
+
+    #blinking_ {
+        padding: 0;
+    }
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .contact-links {
+        padding: 0.5rem;
+    }
+
+    #profile-icon {
+        height: 5rem;
+        width: auto;
+        filter: brightness(5.5) hue-rotate(20deg);
+    }
+
+    #linkedin-icon {
+        filter: invert(27%) sepia(100%) saturate(1311%) hue-rotate(191deg) brightness(94%) contrast(95%);
+    }
+
+    #github-icon {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(140deg) brightness(102%) contrast(102%);
+    }
+
+    #email-icon {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(140deg) brightness(102%) contrast(102%);
+    }
+
+    img {
+        padding: 0.25rem;
+        height: 2rem;
+        width: 2rem;
+    }
+}

@@ -2,9 +2,6 @@
   color-scheme: dark;
   /* Text Colors */
   --text1: #ffffff;
-  --text2: #ce9178;
-  --textParagraphDark: #343434;
-  --textParagraphLight: #cccccc;
 
   /* Background Colors */
   --bgColor1: #1f1f1f;
@@ -20,7 +17,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: system-ui, sans-serif, monospace;
+  font-family: var(--fontMain);
 }
 
 a {
@@ -43,17 +40,34 @@ main {
   align-items: center;
 }
 
+/* Contact  */
 .contact-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  h1 {
-    color: var(--text1);
+  .name-row {
+    display: flex;
+    gap: 1rem;
+
+    #profile-icon {
+      height: 5rem;
+      filter: brightness(100) 
+    }
+
+    .nameblock {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      color: var(--text1);
+    }
   }
 
-  .contact-links {
+  .link-row {
     padding: 0.5rem;
     border-radius: 1rem;
     display: flex;
@@ -66,10 +80,5 @@ main {
       width: 4rem;
       vertical-align: bottom;
     }
-  }
-
-  #profile-icon {
-    height: 5rem;
-    filter: brightness(100) 
   }
 }

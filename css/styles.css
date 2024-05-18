@@ -1,134 +1,34 @@
-h1 {
-  color: #d7ba7d;
-}
+:root {
+  color-scheme: dark;
+  /* Text Colors */
+  --text1: #ffffff;
+  --text2: #ce9178;
+  --textParagraphDark: #343434;
+  --textParagraphLight: #cccccc;
 
-h2 {
-  color: #ce9178;
-}
+  /* Background Colors */
+  --bgColor1: #1f1f1f;
 
-h3 {
-  color: #d7ba7d;
-}
+  /* Fonts */
+  --fontMain: system-ui, sans-serif;
 
-p {
-  color: #cccccc;
-}
-
-a {
-  text-decoration: none;
-}
-
-h1 {
-  color: #d7ba7d;
-}
-
-h2 {
-  color: #ce9178;
-}
-
-h3 {
-  color: #d7ba7d;
-}
-
-p {
-  color: #cccccc;
-}
-
-a {
-  text-decoration: none;
-}
-
-#overlay-system {
-  --position-top: 0rem;
-  --position-bottom: 0rem;
-  --position-left: 0rem;
-  --position-right: 0rem;
-  position: absolute;
-  top: var(--position-top);
-  left: var(--position-left);
-  width: 0;
-  margin: 0;
-  padding: 0;
-  z-index: 100;
-  display: flex;
-  background-color: white;
-}
-
-.overlay-switch-visual {
-  position: fixed;
-  bottom: calc(var(--position-bottom) + 1rem);
-  right: calc(var(--position-right) + 1rem);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 20px;
-  background-color: #d7ba7d;
-  transform: rotate(0deg);
-  transition: 1s;
-  z-index: 1;
-}
-.overlay-switch-visual .menu-icon {
-  height: 4rem;
-}
-
-.overlay-switch-checkbox {
-  position: fixed;
-  bottom: calc(var(--position-bottom) + 1rem);
-  right: calc(var(--position-right) + 1rem);
-  padding: 0;
-  width: 3rem;
-  height: 3rem;
-  z-index: 2;
-  opacity: 0;
-  cursor: pointer;
-}
-.overlay-switch-checkbox:checked ~ .overlay-screen {
-  transform: translateX(0) translateY(0) scale(1);
-}
-.overlay-switch-checkbox:hover ~ .overlay-switch-visual {
-  transform: rotate(360deg) scale(1.1);
-  transition: 0.5s;
-}
-.overlay-switch-checkbox:active ~ .overlay-switch-visual {
-  transform: rotate(360deg) scale(0.9);
-  transition: 0.3s;
-}
-
-.overlay-screen {
-  position: fixed;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  background-color: rgba(59, 59, 59, 0.434);
-  transform: translateX(50%) translateY(50%) scale(0);
-  transform-origin: center;
-  transition: 0.5s;
-}
-.overlay-screen .screen-content {
-  width: 100svw;
-  height: 100svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0;
-  padding: 0;
+  /* Breakpoints */
+  --breakpointTablet: 800px;
+  --breakpointPhone: 400px;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, sans-serif, monospace;
 }
 
-:root {
-  color-scheme: dark;
+a {
+  text-decoration: none;
 }
 
 body {
-  background-color: rgb(31, 31, 31);
+  background-color: var(--bgColor1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,50 +43,33 @@ main {
   align-items: center;
 }
 
-.infobar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-.infobar h1 {
-  padding: 1rem 0 1rem 1rem;
-  font-size: 1.5rem;
-  font-weight: 200;
-  color: #ce9178;
-  font-family: monospace;
-}
-.infobar #blinking_ {
-  padding: 0;
-}
-
 .contact-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  h1 {
+    color: var(--text1);
+  }
+
+  .contact-links {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 4rem;
+      width: 4rem;
+      vertical-align: bottom;
+    }
+  }
+
+  #profile-icon {
+    height: 5rem;
+    filter: brightness(100) 
+  }
 }
-.contact-content .contact-links {
-  padding: 0.5rem;
-}
-.contact-content #profile-icon {
-  height: 5rem;
-  width: auto;
-  filter: brightness(5.5) hue-rotate(20deg);
-}
-.contact-content #linkedin-icon {
-  filter: invert(27%) sepia(100%) saturate(1311%) hue-rotate(191deg) brightness(94%) contrast(95%);
-}
-.contact-content #github-icon {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(140deg) brightness(102%) contrast(102%);
-}
-.contact-content #email-icon {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(140deg) brightness(102%) contrast(102%);
-}
-.contact-content img {
-  padding: 0.25rem;
-  height: 2rem;
-  width: 2rem;
-}/*# sourceMappingURL=styles.css.map */

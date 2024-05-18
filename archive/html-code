@@ -1,0 +1,18 @@
+<!-- Typing effect + blinking "_" -->
+<nav class="infobar">
+    <h1 id="typethis">Hello World!</h1><h1 id="blinking_">_</h1>
+</nav>
+
+<!-- HUD + HIDDEN ITEM -->
+<div id="overlay-system">
+    <input type="checkbox" class="overlay-switch-checkbox">
+    <div class="overlay-switch-visual">
+        <img src="./img/icons/eh-logo.svg" class="menu-icon" alt="">
+    </div>
+    <div class="overlay-screen">
+        <div class="screen-content">
+            <h1>Nothing yet..</h1>
+            <h1>:)</h1>
+        </div>
+    </div>
+</div>

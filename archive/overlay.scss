@@ -1,6 +1,4 @@
-@import './variables';
 
-// BUTTON THAT OPENS OVERLAY
 #overlay-system{
     --position-top: 0rem;
     --position-bottom: 0rem;
@@ -40,7 +38,6 @@
         // SVG Icon color with filter:
         //filter: invert(100%) sepia(3%) saturate(10%) hue-rotate(313deg) brightness(103%) contrast(103%);
     }
-
 }
 
 .overlay-switch-checkbox {

@@ -1,0 +1,84 @@
+:root {
+    color-scheme: dark;
+    /* Text Colors */
+    --text1: #ffffff;
+  
+    /* Background Colors */
+    --bgColor1: #1f1f1f;
+  
+    /* Fonts */
+    --fontMain: system-ui, sans-serif;
+  
+    /* Breakpoints */
+    --breakpointTablet: 800px;
+    --breakpointPhone: 400px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontMain);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  body {
+    background-color: var(--bgColor1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main {
+    height: 100svh;
+    width: 100svw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Contact  */
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    .name-row {
+      display: flex;
+      gap: 1rem;
+  
+      #profile-icon {
+        height: 5rem;
+        filter: brightness(100) 
+      }
+  
+      .nameblock {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+  
+      h1 {
+        color: var(--text1);
+      }
+    }
+  
+    .link-row {
+      padding: 0.5rem;
+      border-radius: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+  
+      img {
+        height: 4rem;
+        width: 4rem;
+        vertical-align: bottom;
+      }
+    }
+  }

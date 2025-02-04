@@ -1,0 +1,188 @@
+@import "_variables.scss";
+@import "_animations.scss";
+@import "_content.scss";
+
+:root {
+    --color-bg-main: rgb(46, 46, 46);
+    --color-bg-secondary: rgb(99, 99, 99);
+
+    --color-font-main: rgb(255, 255, 255);
+
+    --link-hover-color: rgb(59, 59, 59);
+
+    --font-1: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --font-2: "Times New Roman", Times, serif;
+
+    --nav-height: 6rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-1);
+    font-weight: 100;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    color: var(--color-font-main);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 0.5rem;
+    color: var(--color-font-main);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-font-main);
+    font-weight: lighter;
+}
+
+body {
+    background-color: var(--color-bg-main);
+}
+
+// main navigation bar
+#nav-bar {
+    padding: 1rem;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--color-bg-main);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        top: unset;
+        bottom: 0;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .name-header {
+        justify-self: start;
+        align-self: center;
+        text-wrap: nowrap;
+        padding-right: 2rem;
+    }
+
+    .site-navigation {
+        place-self: center;
+        display: flex;
+        gap: 2rem;
+
+        a:hover {
+            font-weight: bolder;
+        }
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            display: none;
+        }
+    }
+
+    .contact-links {
+        justify-self: end;
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+
+        img {
+            width: 2rem;
+            vertical-align: bottom;
+            filter: invert(100%) sepia(0%) saturate(7474%) hue-rotate(167deg) brightness(108%) contrast(103%);
+
+        }
+    }
+
+    h1 {
+        color: var(--color-font-main);
+        font-size: 1.5rem;
+        font-weight: 300;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            font-size: 1rem;
+        }
+    }
+
+    h2 {
+        color: var(--color-font-main);
+        font-size: 1rem;
+        font-weight: 300;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            font-size: 1rem;
+        }
+    }
+}
+
+// view system container
+.view-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-bg-main);
+
+    display: flex;
+    flex-direction: column;
+
+    //scrolling for the view area
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    // hiding scroll bar
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    // hiding scroll bar
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        overflow: scroll;
+    }
+
+    .view {
+        flex: 0 0 100vh;
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: $breakpoint-tablet) {}
+
+        >div {
+            padding-top: 6rem;
+            max-width: 1000px;
+
+            @media screen and (max-width: $breakpoint-tablet) {
+                padding-top: unset;
+            }
+        }
+    }
+}

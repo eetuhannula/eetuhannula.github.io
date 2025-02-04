@@ -1,0 +1,163 @@
+#landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+        max-width: 400px
+    }
+}
+
+#web-development {
+    padding: 1rem;
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        margin-bottom: 0.5rem;
+    }
+
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+        padding-top: unset;
+    }
+
+    .web-development-content {
+        width: 100%;
+        display: flex;
+        gap: 3rem;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            flex-direction: column;
+            padding-top: 1rem;
+            padding-bottom: 5rem;
+        }
+
+        >div,
+        main {
+            max-width: 50%;
+
+            @media screen and (max-width: $breakpoint-tablet) {
+                max-width: 100%;
+            }
+        }
+
+    }
+
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .text-wrapper {
+            padding-bottom: 1rem;
+        }
+
+        .wd-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+
+            img {
+                width: 40px;
+                filter: invert(100%) sepia(0%) saturate(7474%) hue-rotate(167deg) brightness(108%) contrast(103%);
+
+                @media screen and (max-width: $breakpoint-tablet) {
+                    width: 26px;
+                }
+
+            }
+        }
+    }
+
+    .tech-stack {
+        min-width: 300px;
+
+        >div {
+            padding-top: 0.5rem;
+        }
+    }
+
+    ul {
+        list-style-position: inside;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        color: var(--color-font-main);
+    }
+}
+
+#about-me {
+
+    .about-me-content {
+        height: 100%;
+        display: flex;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            flex-direction: column;
+            padding-top: unset;
+            padding-bottom: 5rem;
+        }
+    }
+
+    .image-content {
+        height: 100%;
+        max-height: 700px;
+        width: 50%;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            height: 60vh;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .profile-image {
+            height: 80%;
+
+            @media screen and (max-width: $breakpoint-tablet) {
+                height: 100%;
+            }
+
+            background-image: url('/assets/images/profile-pic.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            span {
+                color: var(--color-font-main);
+                padding: 0.5rem;
+                position: fixed;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .text-content {
+        padding: 3rem;
+        width: 50%;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            padding: 1rem;
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+    }
+}

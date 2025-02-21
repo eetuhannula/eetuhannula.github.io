@@ -8,7 +8,7 @@
     }
 }
 
-#web-development {
+#developer {
     padding: 1rem;
 
     h1 {
@@ -30,7 +30,7 @@
         padding-top: unset;
     }
 
-    .web-development-content {
+    .developer-content {
         width: 100%;
         display: flex;
         gap: 3rem;
@@ -40,41 +40,26 @@
             padding-top: 1rem;
             padding-bottom: 5rem;
         }
-
-        >div,
-        main {
-            max-width: 50%;
-
-            @media screen and (max-width: $breakpoint-tablet) {
-                max-width: 100%;
-            }
-        }
-
     }
 
-    .text-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .profile-image {
+        flex: 1 1 100%;
 
-        .text-wrapper {
-            padding-bottom: 1rem;
+        @media screen and (max-width: $breakpoint-tablet) {
+            min-height: 50vh;
         }
 
-        .wd-icons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+        background-image: url('/assets/images/profile-pic.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-            img {
-                width: 40px;
-                filter: invert(100%) sepia(0%) saturate(7474%) hue-rotate(167deg) brightness(108%) contrast(103%);
-
-                @media screen and (max-width: $breakpoint-tablet) {
-                    width: 26px;
-                }
-
-            }
+        span {
+            color: var(--color-font-main);
+            padding: 0.5rem;
+            position: fixed;
+            bottom: 0;
+            right: 0;
         }
     }
 
@@ -84,80 +69,15 @@
         >div {
             padding-top: 0.5rem;
         }
-    }
 
-    ul {
-        list-style-position: inside;
-        margin: 0;
-        padding: 0;
-    }
-
-    li {
-        color: var(--color-font-main);
-    }
-}
-
-#about-me {
-
-    .about-me-content {
-        height: 100%;
-        display: flex;
-
-        @media screen and (max-width: $breakpoint-tablet) {
-            flex-direction: column;
-            padding-top: unset;
-            padding-bottom: 5rem;
-        }
-    }
-
-    .image-content {
-        height: 100%;
-        max-height: 700px;
-        width: 50%;
-
-        @media screen and (max-width: $breakpoint-tablet) {
-            height: 60vh;
-            width: 100%;
-            padding: 1rem;
+        ul {
+            list-style-position: inside;
+            margin: 0;
+            padding: 0;
         }
 
-        .profile-image {
-            height: 80%;
-
-            @media screen and (max-width: $breakpoint-tablet) {
-                height: 100%;
-            }
-
-            background-image: url('/assets/images/profile-pic.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            span {
-                color: var(--color-font-main);
-                padding: 0.5rem;
-                position: fixed;
-                bottom: 0;
-                right: 0;
-            }
-        }
-    }
-
-    .text-content {
-        padding: 3rem;
-        width: 50%;
-
-        @media screen and (max-width: $breakpoint-tablet) {
-            padding: 1rem;
-            width: 100%;
-        }
-
-        h1 {
-            margin-bottom: 1rem;
-        }
-
-        p {
-            margin-bottom: 5px;
+        li {
+            color: var(--color-font-main);
         }
     }
 }
